@@ -30,7 +30,7 @@ public class PhoneCompanySubscriberMain {
 
         // Displaying bills
         System.out.println("Phone Subscriber Bill: " + phoneBill + " Subscriber ID: " + phoneSubscriber.subscriberId);
-        System.out.println("ISP Subscriber Bill: " + ispBill+ " Subscriber ID: " + ispSubscriber.subscriberId);
+        System.out.println("ISP Subscriber Bill: " + ispBill + " Subscriber ID: " + ispSubscriber.subscriberId);
 
         // Add some internet sessions for a subscriber and test getCurrentSessions
         InternetSessionHistory.addSession(ispSubscriber.subscriberId, LocalDateTime.now(), 100);

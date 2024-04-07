@@ -10,11 +10,8 @@ public class InternetSessionHistory {
     @Getter
     @Setter
     public static class InternetSession {
-        
         private final LocalDateTime begin;
-
         private final Long subscriberId;
-
         private final Long dataUsed;
         
         public InternetSession(Long subscriberId, LocalDateTime begin, long dataUsed) {

@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 //Handle incoming JSON requests that work on user
 public class UserController {
-    private Store store = new Store();
+    private final Store store = new Store();
     //Create a new user
     public String createUser(String userJson) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
@@ -32,11 +32,7 @@ public class UserController {
             return false;
         }
         user.setEmail(user.getEmail().trim());
-        if(!isValidEmail(user.getEmail())) {
-            return false;
-        }
-
-        return true;
+        return isValidEmail(user.getEmail());
     }
 
     //Simply checks if value is null or empty.

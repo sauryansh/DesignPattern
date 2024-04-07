@@ -19,11 +19,7 @@ public class UserValidator {
             return false;
         }
         user.setEmail(user.getEmail().trim());
-        if(!isValidEmail(user.getEmail())) {
-            return false;
-        }
-
-        return true;
+        return isValidEmail(user.getEmail());
     }
 
     //Simply checks if value is null or empty.

@@ -2,6 +2,7 @@ package com.pritam.designpatter101.solid.ocp.end;
 
 import lombok.Getter;
 import lombok.Setter;
+
 //base class closed for modification
 @Getter
 @Setter

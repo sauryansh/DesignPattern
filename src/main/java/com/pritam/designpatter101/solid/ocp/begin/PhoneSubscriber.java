@@ -14,9 +14,9 @@ public class PhoneSubscriber {
     private int baseRate;
 
     //only demonstration
-    public double calculateBill(){
-        List<CallHistory.Call> sessions= CallHistory.getCurrentCalls(subscriberId);
+    public double calculateBill() {
+        List<CallHistory.Call> sessions = CallHistory.getCurrentCalls(subscriberId);
         long totalDuration = sessions.stream().mapToLong(CallHistory.Call::duration).sum();
-        return (double) (totalDuration * baseRate) /100;
+        return (double) (totalDuration * baseRate) / 100;
     }
 }
