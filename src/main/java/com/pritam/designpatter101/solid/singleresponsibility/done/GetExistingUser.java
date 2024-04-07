@@ -1,4 +1,4 @@
-package com.pritam.dp.designpatter101.solid.singleresponsibility.done;
+package com.pritam.designpatter101.solid.singleresponsibility.done;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

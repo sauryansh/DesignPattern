@@ -1,12 +1,25 @@
-package com.pritam.dp.designpatter101.solid.singleresponsibility.done;
+package com.pritam.designpatter101.solid.singleresponsibility.begin;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UserValidator {
-    public boolean userValidator(User user){
-        return isValidUser(user);
+//Handle incoming JSON requests that works on user
+public class UserController {
+    private Store store = new Store();
+    //Create a new user
+    public String createUser(String userJson) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        User user = mapper.readValue(userJson,User.class);
+        if(!isValidUser(user)){
+            return "ERROR";
+        }
+        store.store(user);
+        return "SUCCESS";
     }
+
     private boolean isValidUser(User user) {
         if(!isPresent(user.getName())){
             return false;
@@ -43,4 +56,5 @@ public class UserValidator {
         Matcher matcher = pattern.matcher(value);
         return matcher.find();
     }
+
 }

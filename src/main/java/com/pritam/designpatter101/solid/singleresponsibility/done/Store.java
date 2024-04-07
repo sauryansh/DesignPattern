@@ -1,4 +1,4 @@
-package com.pritam.dp.designpatter101.solid.singleresponsibility.begin;
+package com.pritam.designpatter101.solid.singleresponsibility.done;
 
 import java.util.HashMap;
 import java.util.Map;

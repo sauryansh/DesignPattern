@@ -1,4 +1,4 @@
-package com.pritam.dp.designpatter101.solid.singleresponsibility.begin;
+package com.pritam.designpatter101.solid.singleresponsibility.begin;
 
 //User entity
 public class User {
