@@ -1,8 +1,13 @@
 package com.pritam.designpatter101.solid.singleresponsibility.done;
 
 public class UserPersistenceService {
-    private Store store = new Store();
+    private final Store store = new Store();
     public void saveUser(User user){
-        store.store(user);
+        boolean user1 = store.getUser(user.getName());
+        if(user1){
+            System.out.println("User Already exist");
+        }else{
+            store.store(user);
+        }
     }
 }

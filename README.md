@@ -11,8 +11,8 @@ Design patterns are proven solutions to common software design problems. They re
 This repository includes implementations of the following design patterns:
 
 # SOLID PRINCIPLES
-| KEY                               | DESCRIPTION                                                                     |
-|-----------------------------------|---------------------------------------------------------------------------------|
-| S(SINGLE RESPONSIBILITY PRINCIPLE | [SRP](src/main/java/com/pritam/designpatter101/solid/singleresponsibility) |
+| KEY                                | LINK                                                                       | DESCRIPTION                                                    |
+|------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------|
+| S(SINGLE RESPONSIBILITY PRINCIPLE) | [SRP](src/main/java/com/pritam/designpatter101/solid/singleresponsibility) | USER Controller - Single Responsibility OwnerShip segregated  |
 
 

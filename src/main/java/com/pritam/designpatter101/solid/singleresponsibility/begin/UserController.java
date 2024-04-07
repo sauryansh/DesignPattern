@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//Handle incoming JSON requests that works on user
+//Handle incoming JSON requests that work on user
 public class UserController {
     private Store store = new Store();
     //Create a new user
