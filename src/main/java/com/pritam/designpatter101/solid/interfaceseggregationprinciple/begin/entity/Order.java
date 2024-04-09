@@ -1,28 +1,17 @@
 package com.pritam.designpatter101.solid.interfaceseggregationprinciple.begin.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
 //Order entity class
+@Setter
+@Getter
 public class Order extends Entity {
 
-	private LocalDateTime orderPlacedOn;
-	
-	private double totalValue;
+    private LocalDateTime orderPlacedOn;
 
-	public LocalDateTime getOrderPlacedOn() {
-		return orderPlacedOn;
-	}
+    private double totalValue;
 
-	public void setOrderPlacedOn(LocalDateTime orderPlacedOn) {
-		this.orderPlacedOn = orderPlacedOn;
-	}
-
-	public double getTotalValue() {
-		return totalValue;
-	}
-
-	public void setTotalValue(double totalValue) {
-		this.totalValue = totalValue;
-	}
-	
 }

@@ -1,14 +1,14 @@
 package com.pritam.designpatter101.solid.interfaceseggregationprinciple.end.service;
 
-import com.pritam.designpatter101.solid.interfaceseggregationprinciple.end.entity.User;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.pritam.designpatter101.solid.interfaceseggregationprinciple.end.entity.User;
+
 //Stores User entities
-public class UserPersistenceService implements PersistenceService<User> {
+public class UserPersistenceService implements PersistenceService<User>{
 	
 	private static final Map<Long, User> USERS = new HashMap<>();
 	
@@ -32,8 +32,7 @@ public class UserPersistenceService implements PersistenceService<User> {
 			return USERS.get(id);
 		}
 	}
-	
-	@Override
+	//Dedicated implementation for method that make more sense in that Service class
 	public List<User> findByName(String name) {
 		synchronized (USERS) {
 			return USERS.values().stream().filter(u->u.getName().equalsIgnoreCase(name)).collect(Collectors.toList());

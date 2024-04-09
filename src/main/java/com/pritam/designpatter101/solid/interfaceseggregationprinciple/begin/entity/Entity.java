@@ -1,17 +1,11 @@
 package com.pritam.designpatter101.solid.interfaceseggregationprinciple.begin.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 //Base class for all entities
+@Setter
+@Getter
 public abstract class Entity {
-	
-	private Long id;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	
+    private Long id;
 }
