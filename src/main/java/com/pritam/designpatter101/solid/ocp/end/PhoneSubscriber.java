@@ -11,7 +11,7 @@ public class PhoneSubscriber extends Subscriber {
 
     //only demonstration - open for modification
     @Override
-    public double calculateBill() {
+    public double calculateBill() { //open for modification
         List<CallHistory.Call> sessions = CallHistory.getCurrentCalls(subscriberId);
         long totalDuration = sessions.stream().mapToLong(CallHistory.Call::duration).sum();
         return (double) (totalDuration * baseRate) / 100;
