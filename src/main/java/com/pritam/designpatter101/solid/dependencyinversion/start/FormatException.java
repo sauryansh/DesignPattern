@@ -1,0 +1,11 @@
+package com.pritam.designpatter101.solid.dependencyinversion.start;
+
+import java.io.IOException;
+
+//Thrown by formatter
+public class FormatException extends IOException {
+	
+	public FormatException(Exception cause) {
+		super(cause);
+	}
+}
